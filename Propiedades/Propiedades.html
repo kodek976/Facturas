@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Somos una empresa de construcción con más de 35 años de experiencia en Sevilla. Nos dedicamos principalmente a la construcción de edificios residenciales y a la promoción inmobiliaria.">
+    <meta name="subject" content="Constructora">
+    <meta name="copyright" content="Unira S.L.">
+    <meta name="language" content="español">
+    <meta name="author" content="María José Lopez">
+    <meta name="robots" content="index,follow"> 
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="icon" href="favicon (1).ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght=0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <title>Propiedades - Unira</title>
+</head>
+<body>
+     <header>
+        <nav>
+            <h1>Unira</h1>
+            <ol>
+                <li><a href="../Pagina de Inicio/index.html">Inicio</a></li>
+                <li><a href="../Pagina Conocenos/index.html">Quienes Somos</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="Politicas-De-Privacidad.html">Politicas de Privacidad</a></li>
+            </ol>
+        </nav>
+    </header>
+
+    <main>
+        <h1 style="margin: 40px 0 20px 0;">Encuentra tu propiedad</h1>
+        
+        <div class="Propiedades">
+            
+            <form class="formulario-filtros" action="#" method="post">
+
+                <div class="grupo-operacion">
+                    <p class="titulo-campo">TIPO DE OPERACIÓN</p>
+                    <div class="botones-toggle">
+                        <input type="radio" id="operacion-venta" name="tipo_operacion" value="venta" checked>
+                        <label for="operacion-venta">VENTA</label>
+
+                        <input type="radio" id="operacion-alquiler" name="tipo_operacion" value="alquiler">
+                        <label for="operacion-alquiler">ALQUILER</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="consulta">Tipología</label>
+                    <select id="consulta" name="tipología">
+                        <option value="" disabled selected>Selecciona una opción...</option>
+                        <option value="vivienda">Vivienda</option>
+                        <option value="piso">Piso</option>
+                        <option value="casa">Casa rural</option>
+                        <option value="atico">Ático</option>
+                        <option value="terreno">Terreno</option>
+                    </select>
+                </div>
+
+                <div class="grupo-precio">
+                    <p class="titulo-campo">PRECIO (€)</p>
+                    <div class="inputs-rango">
+                        <div class="input-con-icono">
+                            <span class="simbolo-euro">€</span>
+                            <input type="number" name="precio_min" placeholder="Mínimo" min="0" step="1000">
+                        </div>
+                        <div class="input-con-icono">
+                            <span class="simbolo-euro">€</span>
+                            <input type="number" name="precio_max" placeholder="Máximo" min="0" step="1000">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="habitaciones">Habitaciones</label>
+                    <select id="habitaciones" name="habitaciones">
+                        <option value="Cualquiera">Cualquiera</option>
+                        <option value="1">1 Habitación</option>
+                        <option value="2">2 Habitaciones</option>
+                        <option value="3">3 Habitaciones</option>
+                        <option value="4">4 Habitaciones</option>
+                        <option value="5">5 o más Habitaciones</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="baños">Baños</label>
+                    <select id="baños" name="baños">
+                        <option value="Cualquiera">Cualquiera</option>
+                        <option value="1">1 baño</option>
+                        <option value="2">2 baños</option>
+                        <option value="3">3 o más baños</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="plantas">Plantas</label>
+                    <select id="plantas" name="plantas">
+                        <option value="Cualquiera">Cualquiera</option>
+                        <option value="bajo">Planta baja</option>
+                        <option value="primera">1ª planta</option>
+                        <option value="segunda">2ª planta</option>
+                        <option value="tercera">3ª planta</option>
+                        <option value="cuarta">4ª planta o superior</option>
+                        <option value="atico">Ático</option>
+                    </select>
+                </div>
+
+                <div class="grupo-caracteristicas">
+                    <p class="titulo-campo">CARACTERÍSTICAS</p>
+                    <div class="grid-checkboxes">
+                        <label class="item-checkbox">
+                            <input type="checkbox" name="caracteristicas" value="garaje">
+                            <span>Garaje</span>
+                        </label>
+                        <label class="item-checkbox">
+                            <input type="checkbox" name="caracteristicas" value="piscina">
+                            <span>Piscina</span>
+                        </label>
+                        <label class="item-checkbox">
+                            <input type="checkbox" name="caracteristicas" value="terraza">
+                            <span>Terraza</span>
+                        </label>
+                        <label class="item-checkbox">
+                            <input type="checkbox" name="caracteristicas" value="trastero">
+                            <span>Trastero</span>
+                        </label>
+                        <label class="item-checkbox">
+                            <input type="checkbox" name="caracteristicas" value="comunidad">
+                            <span>Comunidad</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-aplicar-filtros">APLICAR FILTROS</button>
+            </form>
+
+            <section class="grid-section">
+                
+                <a href="Propiedades.html"><article class="tarjeta-casa">
+                    <div class="foto-contenedor">
+                        <div class="etiqueta-operacion">VENTA</div>
+                        <div class="etiqueta-destacado">DESTACADO</div>
+                        <img src="../imagenes/Sevilla.png" alt="Chalet en Feria" class="img-casa">
+                    </div>
+                    <div class="contenido-tarjeta">
+                        <p class="referencia">REF. UNI-001</p>
+                        <h3>Chalet adosado en venta en Feria</h3>
+                        <p class="ubicacion">Centro, Sevilla</p>
+                        <div class="detalles-principales">
+                            <span>4 hab.</span>
+                            <span>4 baños</span>
+                            <span>180 m²</span>
+                        </div>
+                        <p class="planta-texto">3 plantas</p>
+                        <div class="caracteristicas-tags">
+                            <span>PISCINA</span>
+                        </div>
+                        <div class="precio-accion">
+                            <div class="bloque-precio">
+                                <span class="precio">945.000 €</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+                <article class="tarjeta-casa">
+                    <div class="foto-contenedor">
+                        <div class="etiqueta-operacion alquiler">ALQUILER</div>
+                        <img src="Imagenes/foto-casa2.jpg" alt="Chalet en Méntrida" class="img-casa">
+                    </div>
+                    <div class="contenido-tarjeta">
+                        <p class="referencia">REF. UNI-002</p>
+                        <h3>Chalet Independiente</h3>
+                        <p class="ubicacion">• Méntrida, Toledo</p>
+                        <div class="detalles-principales">
+                            <span>4 hab.</span>
+                            <span>3 baños</span>
+                            <span>180 m²</span>
+                        </div>
+                        <p class="planta-texto">Bajo</p>
+                        <div class="caracteristicas-tags">
+                            <span>TERRAZA</span>
+                            <span>PISCINA</span>
+                            <span>COMUNIDAD</span>
+                        </div>
+                        <div class="precio-accion">
+                            <div class="bloque-precio">
+                                <span class="precio">1.500 €/mes</span>
+                            </div>
+                            <a href="#" class="btn-ver-mas">
+                                <img src="Imagenes/flecha-derecha.png" alt="Ver más" class="img-flecha">
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <section>
+            <div>
+                <h3>Contacto</h3>
+                <p>Unira@gmail.com</p>
+                <p>SANTA HORTENSIA, MADRID</p>
+                <p>+34 600 123 456</p>
+            </div>
+            <div>
+                <h3>Redes Sociales</h3>
+                <div>
+                    <a href="#"><img src="Imagenes/instagram-logo-white-circle.webp" alt="instagram logo"></a>
+                    <a href="#"><img src="Imagenes/vecteezy_facebook-logo-white-circle-outline-icon-fb-app-transparent_65386565.png" alt="facebook logo"></a>
+                    <a href="#"><img src="Imagenes/vecteezy_x-logo-white-dashed-outline-icon-premium-quality-transparent_67593085.png" alt="x logo"></a>
+                </div>
+            </div>
+        </section>
+        <p>© 2026 Unira - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

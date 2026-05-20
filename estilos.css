@@ -1,0 +1,740 @@
+body{
+    background-color: #0d0d0d; /* Fondo negro unificado */
+    font-family: Arial, Helvetica, sans-serif; /* Tipografía unificada */
+    color: white;
+    font-size: 16px;
+}
+li{
+width: calc(100%/4);
+font-size: 16px;
+display: inline-block;
+}
+ol{
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 5%;
+    border-bottom:2px solid #dac182;
+}
+
+header nav h1{
+    color:#dac182;
+    font-size:2rem;
+}
+
+header nav ol{
+    display:flex;
+    gap:2rem;
+    list-style:none;
+}
+
+header nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+header nav a:hover{
+    color:#dac182;
+}
+h1{
+    text-align: center;
+}
+article{
+    margin: 10px 0 0 10px;
+    background-color: #444;
+}
+/* Contenedor principal del formulario */
+.form-container {
+    max-width: 600px;
+    margin: -200px 9% 0px auto;
+    padding: 30px;
+    background-color: #24221F; /* Un tono ligeramente más claro que el fondo para dar relieve */
+    border: 1px solid #B08D57;
+    border-radius: 8px;
+}
+h2{
+    color: #B08D57;
+}
+a{
+    text-decoration: none;
+}
+.form-container h2 {
+    color: #B08D57;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+}
+
+/* Grupos de cada campo */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Estilos comunes para inputs, select y textarea */
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    background-color: #1C1A17; /* Fondo idéntico al body */
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: white;
+    padding: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilos específicos para el select (flecha adaptada a entornos oscuros) */
+.form-group select {
+    cursor: pointer;
+    appearance: none; /* Quita el estilo por defecto */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path fill='%23B08D57' d='M0 3l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 35px;
+}
+
+/* Efecto focus: cuando el usuario pincha en un campo */
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #B08D57; /* Cambia al dorado de la marca */
+}
+
+/* Estilos de la casilla de verificación (Checkbox) */
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.form-checkbox input[type="checkbox"] {
+    margin-top: 4px;
+    cursor: pointer;
+    accent-color: #B08D57; /* Pinta el interior del checkbox de dorado en navegadores modernos */
+}
+
+.form-checkbox label {
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+/* Botón de Enviar */
+.btn-submit {
+    background-color: #B08D57;
+    color: #1C1A17; /* Texto oscuro para que contraste bien con el dorado */
+    border: none;
+    border-radius: 4px;
+    padding: 14px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-submit:hover {
+    background-color: #c4a26c; /* Dorado un poco más brillante al pasar el ratón */
+}
+
+.btn-submit:active {
+    transform: scale(0.98); /* Pequeño efecto de pulsación */
+}
+/* Esto arreglará la sede de forma aislada, sin alterar tu formulario */
+section.datos {
+    background-color: #262320; 
+    border: 1px solid #36322d; 
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 400px;
+
+    /* Quitamos el top y left anteriores y usamos transform */
+    /* El primer valor mueve a la IZQUIERDA (-) o DERECHA (+) */
+    /* El segundo valor mueve hacia ARRIBA (-) o ABAJO (+) */
+    transform: translate(70px, 150px);
+}
+
+section.datos h2 {
+    color: #B08D57; /* Dorado */
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+section.datos p {
+    color: white;
+    margin: 12px 0;
+}
+.privacidad{
+    max-width: 800px;
+    padding: 40px; /* Espacio dentro de la caja gris */
+
+    /* AÑADE ESTO PARA CONTROLAR LOS MÁRGENES DE LA PÁGINA: */
+    margin: 60px auto; /* 60px de separación arriba y abajo de la pantalla, y 'auto' la centra de izquierda a derecha */
+}
+footer{
+    text-align: center;
+}
+/* ==========================================
+   ESTRUCTURA GENERAL (LAYOUT DE LA PÁGINA)
+   ========================================== */
+
+/* Tu div contenedor: Alinea el formulario a la izquierda y el catálogo a la derecha */
+.Propiedades {
+    display: flex;
+    align-items: flex-start; /* Evita que el formulario se estire verticalmente hacia abajo */
+    gap: 40px;               /* Distancia de separación entre el formulario y las casas */
+    padding: 20px 0;
+    width: 100%;
+}
+
+
+/* ==========================================================
+   ESTILOS REVISADOS DEL FORMULARIO (MÁXIMA FIDELIDAD)
+   ========================================================== */
+
+.formulario-filtros {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent; /* Integrado al fondo oscuro general */
+    border-right: 1px solid #2a2622; /* Línea divisoria elegante de tu diseño */
+    padding: 0 40px 40px 5%;
+    
+    width: 320px;
+    min-width: 320px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+/* Títulos de sección grisáceos en mayúsculas (para Operación, Precio y Características) */
+.titulo-campo {
+    color: #888888;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+/* Estilos para tus bloques estándar (.form-group) como Tipología, Habitaciones, Baños y Plantas */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Etiquetas de texto encima de los selectores */
+.form-group label {
+    color: #888888;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* Diseño moderno y adaptado para los desplegables <select> */
+.form-group select {
+    background-color: transparent;
+    border: 1px solid #36322d;
+    color: #E5E5E5;
+    padding: 12px 15px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo para las opciones de dentro del menú desplegable */
+.form-group select option {
+    background-color: #262320; /* Mantiene el fondo oscuro al abrir el desplegable */
+    color: #E5E5E5;
+}
+
+.form-group select:focus {
+    border-color: #B08D57; /* Se ilumina en dorado al abrirlo o pincharlo */
+}
+
+
+/* ==========================================
+   1. CONMUTADOR DE OPERACIÓN (VENTA / ALQUILER)
+   ========================================== */
+.botones-toggle {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Ocultamos el radio button nativo (el círculo) */
+.botones-toggle input[type="radio"] {
+    display: none;
+}
+
+/* Botón en estado apagado / deseleccionado */
+.botones-toggle label {
+    display: inline-block;
+    padding: 12px 30px;
+    color: #888888;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 100px;
+}
+
+.botones-toggle label:hover {
+    color: #E5E5E5;
+}
+
+/* Botón iluminado automáticamente al seleccionarse */
+.botones-toggle input[type="radio"]:checked + label {
+    background-color: #B08D57; /* Tu dorado corporativo */
+    color: #1C1A17;            /* Texto oscuro para máximo contraste */
+}
+
+
+/* ==========================================
+   2. RANGOS DE PRECIO (€ MÍNIMO / € MÁXIMO)
+   ========================================== */
+.inputs-rango {
+    display: flex;
+    gap: 15px;
+}
+
+/* Contenedor falso que simula el borde del input */
+.input-con-icono {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #36322d;
+    padding: 12px 15px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+/* Símbolo fijo del euro */
+.simbolo-euro {
+    color: #B08D57;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 8px;
+    user-select: none;
+}
+
+/* Input numérico real oculto por dentro */
+.input-con-icono input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #E5E5E5;
+    font-size: 14px;
+    width: 100%;
+}
+
+.input-con-icono input::placeholder {
+    color: #555555;
+    font-weight: 500;
+}
+
+/* Ilumina la caja completa al pinchar para escribir un número */
+.input-con-icono:focus-within {
+    border-color: #B08D57;
+}
+
+/* Eliminamos las flechas de control nativas del input number */
+.input-con-icono input::-webkit-outer-spin-button,
+.input-con-icono input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.input-con-icono input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+/* ==========================================
+   3. REJILLA DE CARACTERÍSTICAS (CHECKBOXES)
+   ========================================== */
+.grid-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 1fr)); /* Dos columnas perfectas */
+    gap: 12px 25px;
+}
+
+.item-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.item-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    cursor: pointer;
+    accent-color: #B08D57; /* El tick interno se vuelve dorado al marcarse */
+}
+
+.item-checkbox span {
+    color: #CCCCCC;
+    font-size: 14.5px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.item-checkbox:hover span {
+    color: #FFFFFF;
+}
+
+
+/* ==========================================================
+   BOTÓN REVISADO (APLICAR FILTROS - FIJO ABAJO DEL PANEL)
+   ========================================================== */
+.btn-aplicar-filtros {
+    background-color: #bfa16f; /* El dorado apagado/mate exacto de tu captura */
+    color: #1a1715;            /* Contraste oscuro para el texto */
+    border: none;
+    outline: none;
+    
+    width: 100%;               /* Ocupa todo el ancho del panel lateral */
+    padding: 16px 0;
+    
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 0px;        /* Completamente recto, estilo premium minimalista */
+    
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el ratón por encima (Hover) */
+.btn-aplicar-filtros:hover {
+    background-color: #dac182; /* Brillo dorado clásico al pasar el cursor */
+}
+
+
+/* ==========================================================
+   5. NUEVO ESTILO: CATÁLOGO DE CASAS (A LA DERECHA)
+   ========================================================== */
+.grid-section {
+    flex-grow: 1; /* Le dice a la sección de las casas que absorba todo el espacio de la derecha */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+    padding: 0 5% 40px 20px;
+}
+
+.tarjeta-casa {
+    background-color: transparent;
+    border: 1px solid #1f1c1a;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Contenedor relativo para posicionar las etiquetas de Venta o Destacado encima */
+.foto-contenedor {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    background-color: #161413;
+    overflow: hidden;
+}
+
+/* Cuadrados simuladores si no tienes imágenes cargadas aún */
+.placeholder-imagen-casa {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    opacity: 0.15;
+}
+
+/* Etiquetas sobre la imagen */
+.etiqueta-operacion, .etiqueta-destacado {
+    position: absolute;
+    top: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: 1px solid #bfa16f;
+    color: #bfa16f;
+    background-color: rgba(13, 13, 13, 0.8);
+}
+.etiqueta-operacion { left: 15px; }
+.etiqueta-operacion.alquiler {
+    background-color: #bfa16f;
+    color: #0d0d0d;
+}
+.etiqueta-destacado { right: 15px; }
+
+.contenido-tarjeta {
+    padding: 24px 0 10px 0; /* Sin paddings laterales para seguir el corte limpio de tu mockup */
+    display: flex;
+    flex-direction: column;
+}
+
+.referencia {
+    color: #666666;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    margin: 0 0 6px 0;
+}
+
+.contenido-tarjeta h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+.ubicacion {
+    color: #888888;
+    font-size: 13px;
+    margin: 6px 0 14px 0;
+}
+
+.detalles-principales {
+    display: flex;
+    gap: 15px;
+    color: #888888;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.planta-texto {
+    color: #888888;
+    font-size: 13px;
+    margin: 0 0 15px 0;
+}
+
+/* Micro-etiquetas de las características del inmueble (Garaje, terraza...) */
+.caracteristicas-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.caracteristicas-tags span {
+    font-size: 10px;
+    font-weight: bold;
+    border: 1px solid #333230;
+    color: #888888;
+    padding: 4px 8px;
+    letter-spacing: 0.5px;
+}
+
+.precio-accion {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 10px;
+    border-top: 1px solid #1f1c1a;
+    padding-top: 20px;
+}
+
+.bloque-precio {
+    display: flex;
+    flex-direction: column;
+}
+
+.precio {
+    font-size: 22px;
+    color: #bfa16f;
+    font-family: Georgia, serif; /* Un toque clásico elegante para los precios */
+}
+
+.iva-nota {
+    font-size: 11px;
+    color: #555555;
+    margin-top: 4px;
+}
+
+/* Botón flecha minimalista */
+.btn-ver-mas {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #333230;
+    color: #bfa16f;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.btn-ver-mas:hover {
+    border-color: #bfa16f;
+    background-color: #bfa16f;
+    color: #0d0d0d;
+}
+
+
+/* ==========================================
+   PIE DE PÁGINA Y ADAPTACIONES (RESTO ORIGINAL)
+   ========================================== */
+footer{
+    background:black;
+    padding-top:4rem;
+}
+
+footer section{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:3rem;
+
+    padding:0 5% 4rem;
+}
+
+footer h3{
+    color:#dac182;
+    margin-bottom:1rem;
+}
+
+footer p{
+    margin-bottom:0.5rem;
+}
+
+footer section div:nth-of-type(2) div{
+
+    display:flex;
+    gap:1.5rem;
+}
+
+footer a{
+
+    width:55px;
+    height:55px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:1px solid #dac182;
+    border-radius:50%;
+
+    transition:0.3s;
+}
+
+footer a img{
+
+    width:24px;
+    height:24px;
+
+    object-fit:contain;
+
+    transition:0.3s;
+}
+
+
+footer a:hover{
+
+    background:#dac182;
+
+    transform:translateY(-5px);
+}
+
+footer a:hover img{
+
+    filter: brightness(0);
+}
+footer a{
+    color:white;
+    font-size:2rem;
+    transition:0.3s;
+}
+
+footer a:hover{
+    color:#dac182;
+}
+
+footer > p{
+    border-top:1px solid #dac182;
+    text-align:center;
+    padding:1.5rem;
+}
+
+@media(max-width:900px){
+
+    header nav{
+        flex-direction:column;
+        gap:1.5rem;
+    }
+
+    header nav ol{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+}
+
+@media(max-width:600px){
+
+    header nav{
+        padding:1rem;
+    }
+
+    header nav ol{
+        flex-direction:column;
+        align-items:center;
+        gap:1rem;
+    }
+
+    main section:nth-of-type(1){
+        min-height:60vh;
+    }
+
+    main section:nth-of-type(2){
+        padding:3rem 1rem;
+    }
+
+    main section:nth-of-type(3){
+        padding:3rem 1rem;
+    }
+
+    footer section{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    footer section div:nth-of-type(2) div{
+        justify-content:center;
+    }
+
+}
